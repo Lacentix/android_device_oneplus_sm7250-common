@@ -46,10 +46,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
-    audio.primary.kona \
+    audio.primary.lito \
     audio.r_submix.default \
     audio.usb.default \
-    audio_amplifier.kona \
+    audio_amplifier.lito \
     liba2dpoffload \
     libbatterylistener \
     libcomprcapture \
@@ -64,12 +64,11 @@ PRODUCT_PACKAGES += \
     libssrec \
     libvolumelistener
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
+AUDIO_HAL_DIR := hardware/qcom-caf/sm7250/audio
 
 PRODUCT_COPY_FILES += \
-    $(AUDIO_HAL_DIR)/configs/kona/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(AUDIO_HAL_DIR)/configs/kona/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(AUDIO_HAL_DIR)/configs/kona/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
+    $(AUDIO_HAL_DIR)/configs/lito/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(AUDIO_HAL_DIR)/configs/lito/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
@@ -135,7 +134,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.kona \
+    gralloc.lito \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
     libqdMetaData \
@@ -144,7 +143,7 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libvulkan \
-    memtrack.kona \
+    memtrack.lito \
     vendor.display.config@1.9.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
@@ -465,4 +464,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
+$(call inherit-product, vendor/oneplus/sm7250-common/sm7250-common-vendor.mk)
